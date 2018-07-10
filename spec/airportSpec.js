@@ -1,8 +1,13 @@
-describe("airport", function() {
+describe('airport.js', function() {
+
+  var airport;
+  var plane;
+
   describe(".land", function() {
+
     it('instructs a plane to land', function() {
+      airport = new Airport('name');
       plane = jasmine.createSpy('plane');
-      var airport = new Airport();
       expect(airport.land(plane)).toEqual(plane);
     });
   });
