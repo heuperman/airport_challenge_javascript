@@ -8,7 +8,8 @@ describe('weather.js', function() {
 
   describe(".isStormy", function() {
     it('returns true', function() {
-      expect(weather.isStormy).toEqual(true);
+      spyOn(Math,'random').and.returnValue(0);
+      expect(weather.isStormy()).toEqual(true);
     });
   });
 });
